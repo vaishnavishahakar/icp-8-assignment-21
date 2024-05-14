@@ -11,17 +11,20 @@
             background-color: #eeeee4;
         }
 
+        .text-center{
+            text-align: center;
+        }
+        .dashed-bottom{
+            border-bottom: 1px dashed gray;
+        }
+        
         .receipt-container {
             width: 80%;
-            border: 1px solid gray;
             margin: 0 auto;
             background-color: #fff;
             padding: 10px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-        .receipt-header{
-            border-bottom: 1px dashed gray;
         }
 
         .brand-logo {
@@ -30,9 +33,6 @@
             margin: 0 auto;
         }
 
-        .brand-title {
-            text-align: center;
-        }
         .brand-address{
             text-align: right;
         }
@@ -40,13 +40,11 @@
             text-align: right;
         }
         .receipt-title{
-            text-align: center;
             font-size: 30px;
             margin: 40px 0;
         }
         .receipt-body{
             position: relative;
-            border-bottom: 1px dashed gray;
         }
         .receipt-detail{
             display: flex;
@@ -60,7 +58,6 @@
         }
         .receipt-detail-value{
             font-weight: bold;
-            border-bottom: 1px dashed gray;
             width: 30%;
         }
         .accountant-signature{
@@ -74,6 +71,11 @@
             bottom: 20px;
             transform: rotate(-30deg);
         }
+        .receipt-footer{
+            padding: 20px 0;
+            font-size: 20px;
+            background-color: #ffca39;
+        }
 
     </style>
 </head>
@@ -82,9 +84,9 @@
     <h1 style="text-align: center;">RECEIPT DESIGN</h1>
 
     <div class="receipt-container">
-        <div class="receipt-header">
+        <div class="receipt-header dashed-bottom">
             <img src="./logo.c23aa56e.png" class="brand-logo">
-            <h2 class="brand-title"> Road To Code</h2>
+            <h2 class="text-center"> Road To Code</h2>
             <p class="brand-address">
                 404, Above Lotus Hospital, <br>
                 Shewalewadi,Hadapsar, <br> Pune - 412307.
@@ -94,14 +96,14 @@
             </p>
         </div>
 
-        <div class="receipt-body">
-            <h3 class="receipt-title">Payment Receipt</h3>
+        <div class="receipt-body dashed-bottom">
+            <h3 class="receipt-title text-center">Payment Receipt</h3>
 
             <div class="receipt-detail">
                 <div class="receipt-detail-key">
                     Receipt No. 1
                 </div>
-                <div class="receipt-detail-value">
+                <div class="receipt-detail-value dashed-bottom">
                     123456789
                 </div>
             </div>
@@ -110,7 +112,7 @@
                 <div class="receipt-detail-key">
                     Payment Date
                 </div>
-                <div class="receipt-detail-value">
+                <div class="receipt-detail-value dashed-bottom">
                     15 May 2024
                 </div>
             </div>
@@ -119,7 +121,7 @@
                 <div class="receipt-detail-key">
                     Amount :
                 </div>
-                <div class="receipt-detail-value">
+                <div class="receipt-detail-value dashed-bottom">
                     400/-
                 </div>
             </div>
@@ -128,7 +130,7 @@
                 <div class="receipt-detail-key">
                     Payment Mode :
                 </div>
-                <div class="receipt-detail-value">
+                <div class="receipt-detail-value dashed-bottom">
                     UPI
                 </div>
             </div>
@@ -139,11 +141,14 @@
                 Accountant Signature
                 <br><br><br>
             </p>
-
         </div>
 
-        <div class="receipt-footer">
+        <p>
+            This is a computer generated receipt and does not require any signature.
 
+        </p>
+        <div class="receipt-footer text-center">
+            Thank you for your payment.
         </div>
     </div>
 </body>
